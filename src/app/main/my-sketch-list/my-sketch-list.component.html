@@ -21,9 +21,15 @@
 </a>
 
 <div class="ss-sketch-list">
-  <div class="ss-sketch-list__sketch-item" *ngFor="let s of [1]">
+  <div
+    class="ss-sketch-list__sketch-item"
+    *ngFor="let s of sketches"
+    [ngStyle]="{ backgroundImage: 'url(' + s.imageURL + ')' }"
+  >
     <div class="ss-sketch-list__sketch-item-footer">
-      <span> Ghost by <b>Unknown</b> </span>
+      <span>
+        {{ s.name }}
+      </span>
     </div>
   </div>
 </div>

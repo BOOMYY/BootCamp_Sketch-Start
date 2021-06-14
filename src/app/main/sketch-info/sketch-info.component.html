@@ -1,32 +1,19 @@
 <div class="ss-sketch">
-    <div class="d-flex mt-2">
-      <b>Sketch by:</b>
-  
-      <div class="ss-sketch__user-info">
-        <img
-          src="https://lh3.googleusercontent.com/a-/AOh14GgEeQDvVh8JFRcmddZou3WeeF72mKasmmPaDC5nsA=s96-c"
-          alt=""
-        />
-  
-        <span>Jhasmin Zsanelle Borromeo</span>
-      </div>
+  <div class="d-flex align-items-center mt-2">
+    <b>Sketch by:</b>
+    <div class="ss-sketch__user-info">
+      <img [src]="sketch?.owner.photoURL" alt="" />
+      <span>{{ sketch?.owner.displayName }}</span>
     </div>
-  
-    <div class="d-flex mt-2">
-      <b>Name: </b>
-  
-      <span> Patrick </span>
-    </div>
-  
-    <div class="d-flex mt-2">
-      <b>Description: </b>
-  
-      <span>wAAAAAAAAH</span>
-    </div>
-  
-    <img
-      src="https://firebasestorage.googleapis.com/v0/b/stephenvinuya.appspot.com/o/sketches%2Fu9odcpetnz?alt=media&token=cea82676-5b56-4abe-969c-25f4e00218ff"
-      alt=""
-      class="ss-sketch__sketch-image"
-    />
   </div>
+  <div class="d-flex mt-2">
+    <b>Name: &nbsp; </b>
+    <span> {{ sketch?.name }} </span>
+  </div>
+  <div class="d-flex mt-2">
+    <b>Description: </b>
+    <span>{{ sketch?.description }}</span>
+  </div>
+
+  <img [src]="sketch?.imageURL" alt="" class="ss-sketch__sketch-image" />
+</div>
